@@ -1,0 +1,28 @@
+{
+    "on_permissions": {
+        "all": "0",
+        "uids": [
+            "102763163"
+        ],
+        "badges": {
+            "broadcaster": "1"
+        }
+    },
+    "on_channel": {
+        "all": "0",
+        "uids": [],
+        "badges": {}
+    },
+    "on_bash": {
+        "all": "1",
+        "uids": [],
+        "badges": {}
+    },
+    "on_ping": {
+        "all": "0",
+        "uids": [
+            "102763163"
+        ],
+        "badges": {}
+    }
+}
