@@ -8,11 +8,6 @@
             "broadcaster": "1"
         }
     },
-    "on_channel": {
-        "all": "0",
-        "uids": [],
-        "badges": {}
-    },
     "on_bash": {
         "all": "1",
         "uids": [],
