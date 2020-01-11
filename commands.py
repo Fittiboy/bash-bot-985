@@ -198,7 +198,7 @@ class Commands:
             gull_s = "seagulls"
         else:
             gull_s = "seagull"
-        c.privmsg(bot.channel, f"Chat has patted {patnum} {gull_s}"
+        c.privmsg(bot.channel, f"Chat has patted {patnum} {gull_s}")
 
 
 commands = Commands()
