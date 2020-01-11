@@ -189,7 +189,7 @@ class Commands:
     def on_pat(self, e, msg, c, bot):
         with open('pat_count.json', 'r') as patfile:
             patlist = json.load(patfile)
-            patnum = patlist[0]
+            patnum = patlist.pop()
             patnum += 1
             patlist.append(patnum)
         with open('pat_count.json', 'w') as patfile:
