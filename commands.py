@@ -192,8 +192,8 @@ class Commands:
             patnum = patlist[0]
             patnum += 1
             patlist.append(patnum)
-        with open('pat_count.json') as patfile:
-            patfile.dump(patlist, patfile)
+        with open('pat_count.json', 'w') as patfile:
+            json.dump(patlist, patfile)
         if patnum > 1:
             gull_s = "seagulls"
         else:
