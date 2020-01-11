@@ -165,24 +165,40 @@ class Commands:
         c.privmsg(bot.channel, "This is just a test command!")'''
 
     @check_permissions
-    @check_cooldown(cooldown=30)
+    @check_cooldown(cooldown=10)
     def on_bash(self, e, msg, c, bot):
         # Open file
-        with open('bash_count.json') as bashfile:
-            bashlist = json.load(bashfile)
-            bashnum = bashlist.pop()
-            # add bash
-            bashnum += 1
-            bashlist.append(bashnum)
-        with open('bash_count.json', 'w') as bashfile:
-            json.dump(bashlist, bashfile)
-            # save and close file
-        # print bash number in chat
-        if bashnum > 1:
+        #with open('bash_count.json') as bashfile:
+        #    bashlist = json.load(bashfile)
+        #    bashnum = bashlist.pop()
+        #    # add bash
+        #    bashnum += 1
+        #    bashlist.append(bashnum)
+        #with open('bash_count.json', 'w') as bashfile:
+        #    json.dump(bashlist, bashfile)
+        #    # save and close file
+        ## print bash number in chat
+        #if bashnum > 1:
+        #    gull_s = "seagulls"
+        #else:
+        #    gull_s = "seagull"
+        c.privmsg(bot.channel, f"!save")
+
+    @check_permissions
+    @check_cooldown(cooldown=30)
+    def on_pat(self, e, msg, c, bot):
+        with open('pat_count.json', 'r') as patfile:
+            patlist = json.load(patfile)
+            patnum = patlist[0]
+            patnum += 1
+            patlist.append(patnum)
+        with open('pat_count.json') as patfile:
+            patfile.dump(patlist, patfile)
+        if patnum > 1:
             gull_s = "seagulls"
         else:
             gull_s = "seagull"
-        c.privmsg(bot.channel, f"Chat has gently carried {bashnum} {gull_s} back to their nests after saving them.")
+        c.privmsg(bot.channel, f"Chat has patted {patnum} {gull_s}"
 
 
 commands = Commands()
