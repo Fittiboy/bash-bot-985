@@ -43,16 +43,19 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
     def on_reconnect(self, c, e):
         time.sleep(self.reconnect)
         self.reconnect *= 2
+        print(f"Reconnecting with reconnect time at {self.reconnect}s")
         c.reconnect()
 
     def on_disconnect(self, c, e):
         time.sleep(self.reconnect)
         self.reconnect *= 2
+        print(f"Reconnecting with reconnect time at {self.reconnect}s")
         c.reconnect()
 
     def on_dccdisconnect(self, c, e):
         time.sleep(self.reconnect)
         self.reconnect *= 2
+        print(f"Reconnecting with reconnect time at {self.reconnect}s")
         c.reconnect()
 
     def on_pubmsg(self, c, e):
