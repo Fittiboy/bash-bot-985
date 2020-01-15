@@ -198,7 +198,7 @@ class Commands:
         #     gull_s = "seagulls"
         # else:
         #     gull_s = "seagull"
-        c.privmsg(bot.channel, f"Chat has patted Otto {patnum} times.")
+        c.privmsg(bot.channel, f"Chat has patted Otto {patnum} times. jermaOtto")
 
     @check_permissions
     @check_cooldown(cooldown=120)
