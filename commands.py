@@ -208,7 +208,7 @@ class Commands:
     @check_permissions
     @check_cooldown(cooldown=20)
     def on_slap(self, e, msg, c, bot):
-        c.privmsg(bot.channel, "clips.twitch.tv/SpunkyWildDillGivePLZ")
+        c.privmsg(bot.channel, "https://clips.twitch.tv/SpunkyWildDillGivePLZ")
 
 
 commands = Commands()
