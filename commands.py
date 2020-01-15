@@ -200,5 +200,10 @@ class Commands:
             gull_s = "seagull"
         c.privmsg(bot.channel, f"Chat has patted {patnum} {gull_s}.")
 
+    @check_permissions
+    @check_cooldown(cooldown=120)
+    def on_legolas(self, e, msg, c, bot):
+        c.privmsg(bot.channel, "https://clips.twitch.tv/RoughPreciousYakKeepo")
+
 
 commands = Commands()
