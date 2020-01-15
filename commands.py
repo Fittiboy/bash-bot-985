@@ -182,7 +182,7 @@ class Commands:
             gull_s = "seagulls"
         else:
             gull_s = "seagull"
-        # c.privmsg(bot.channel, f"!save")
+        c.privmsg(bot.channel, f"!save")
 
     @check_permissions
     @check_cooldown(cooldown=30)
