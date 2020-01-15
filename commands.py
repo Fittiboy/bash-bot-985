@@ -205,5 +205,10 @@ class Commands:
     def on_legolas(self, e, msg, c, bot):
         c.privmsg(bot.channel, "https://clips.twitch.tv/RoughPreciousYakKeepo")
 
+    @check_permissions
+    @check_cooldown(cooldown=20)
+    def on_slap(self, e, msg, c, bot):
+        c.privmsg(bot.channel, "clips.twitch.tv/SpunkyWildDillGivePLZ")
+
 
 commands = Commands()
