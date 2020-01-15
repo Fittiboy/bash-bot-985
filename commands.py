@@ -194,11 +194,11 @@ class Commands:
             patlist.append(patnum)
         with open('pat_count.json', 'w') as patfile:
             json.dump(patlist, patfile)
-        if patnum > 1:
-            gull_s = "seagulls"
-        else:
-            gull_s = "seagull"
-        c.privmsg(bot.channel, f"Chat has patted {patnum} {gull_s}.")
+        # if patnum > 1:
+        #     gull_s = "seagulls"
+        # else:
+        #     gull_s = "seagull"
+        c.privmsg(bot.channel, f"Chat has patted Otto {patnum} times.")
 
     @check_permissions
     @check_cooldown(cooldown=120)
