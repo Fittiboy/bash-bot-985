@@ -9,7 +9,7 @@
         }
     },
     "on_bash": {
-        "all": "0",
+        "all": "1",
         "uids": [],
         "badges": {}
     },
