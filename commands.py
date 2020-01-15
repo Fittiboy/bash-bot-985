@@ -168,20 +168,20 @@ class Commands:
     @check_cooldown(cooldown=10)
     def on_bash(self, e, msg, c, bot):
         # Open file
-        #with open('bash_count.json') as bashfile:
-        #    bashlist = json.load(bashfile)
-        #    bashnum = bashlist.pop()
-        #    # add bash
-        #    bashnum += 1
-        #    bashlist.append(bashnum)
-        #with open('bash_count.json', 'w') as bashfile:
-        #    json.dump(bashlist, bashfile)
-        #    # save and close file
-        ## print bash number in chat
-        #if bashnum > 1:
-        #    gull_s = "seagulls"
-        #else:
-        #    gull_s = "seagull"
+        with open('bash_count.json') as bashfile:
+            bashlist = json.load(bashfile)
+            bashnum = bashlist.pop()
+            # add bash
+            bashnum += 1
+            bashlist.append(bashnum)
+        with open('bash_count.json', 'w') as bashfile:
+            json.dump(bashlist, bashfile)
+            # save and close file
+        # print bash number in chat
+        if bashnum > 1:
+            gull_s = "seagulls"
+        else:
+            gull_s = "seagull"
         c.privmsg(bot.channel, f"!save")
 
     @check_permissions
