@@ -236,7 +236,7 @@ class Commands:
     @check_permissions
     @check_cooldown(cooldown=0)
     def on_coop(self, e, msg, c, bot):
-        c.privmsg(bot.channel, "jermaJup3 jermaJup4 JUP")
+        c.privmsg(bot.channel, ", jermaJup3 jermaJup4 JUP")
 
 
 commands = Commands()
