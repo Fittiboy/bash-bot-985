@@ -233,5 +233,10 @@ class Commands:
         c.privmsg(bot.channel, "The total score for the channel is" +
                                f" currently {score}")
 
+    @check_permissions
+    @check_cooldown(cooldown=0)
+    def on_coop(self, e, msg, c, bot):
+        c.privmsg(bot.channel, "jermaJup3 jermaJup4 JUP")
+
 
 commands = Commands()
