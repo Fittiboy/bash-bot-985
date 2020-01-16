@@ -190,7 +190,7 @@ class Commands:
     def on_pat(self, e, msg, c, bot):
         randnr = random.randint(1, 100)
         if randnr == 1:
-            c.privmsge(bot.channel, "TRICKED YOU! It's Egypt" +
+            c.privmsg(bot.channel, "TRICKED YOU! It's Egypt" +
                        " and we're both phlog pyros!")
             return
         with open('pat_count.json', 'r') as patfile:
