@@ -43,5 +43,15 @@
         "all": "1",
         "uids": [],
         "badges": {}
+    },
+    "on_oat": {
+        "all": "1",
+        "uids": [],
+        "badges": {}
+    },
+    "on_add": {
+        "all": "0",
+        "uids": [],
+        "badges": {}
     }
 }

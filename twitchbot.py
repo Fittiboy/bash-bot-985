@@ -62,6 +62,17 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
         """Tries to execute command if message begins with '!'"""
         if e.arguments[0][0] == "!":
             self.exec_command(c, e)
+        elif "+2" in e.arguments[0] and "-2" not in e.arguments[0]:
+            with open('score.json') as scorefile:
+                score = json.load(scorefile)[0] - 2
+            with open('score.json', 'w') as scorefile:
+                json.dump(score, scorefile)
+        elif "-2" in e.arguments[0] and "+2" not in e.arguments[0]:
+            with open('score.json') as scorefile:
+                score = json.load(scorefile)[0] + 2
+            with open('score.json', 'w') as scorefile:
+                json.dump(score, scorefile)
+
 
     @commands.exec(commands.commands)
     def exec_command(self, c, e):
