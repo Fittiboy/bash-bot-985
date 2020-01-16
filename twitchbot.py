@@ -64,12 +64,12 @@ class TwitchBot(irc.bot.SingleServerIRCBot):
             self.exec_command(c, e)
         elif "+2" in e.arguments[0] and "-2" not in e.arguments[0]:
             with open('score.json') as scorefile:
-                score = json.load(scorefile) - 2
+                score = json.load(scorefile) + 2
             with open('score.json', 'w') as scorefile:
                 json.dump(score, scorefile)
         elif "-2" in e.arguments[0] and "+2" not in e.arguments[0]:
             with open('score.json') as scorefile:
-                score = json.load(scorefile) + 2
+                score = json.load(scorefile) - 2
             with open('score.json', 'w') as scorefile:
                 json.dump(score, scorefile)
 

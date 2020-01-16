@@ -231,7 +231,7 @@ class Commands:
         with open('score.json') as scorefile:
             score = json.load(scorefile)
         c.privmsg(bot.channel, "The total score for the channel is" +
-                               f" currently {score}.")
+                               f" currently {score}")
 
 
 commands = Commands()
