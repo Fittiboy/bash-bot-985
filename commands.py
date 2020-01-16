@@ -191,7 +191,7 @@ class Commands:
         randnr = random.randint(1, 100)
         if randnr == 1:
             c.privmsg(bot.channel, "TRICKED YOU! It's Egypt" +
-                       " and we're both phlog pyros!")
+                       " and we're both phlog pyros! jermaGrin")
             return
         with open('pat_count.json', 'r') as patfile:
             patlist = json.load(patfile)
