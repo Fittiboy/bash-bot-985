@@ -225,5 +225,13 @@ class Commands:
         c.privmsg(bot.channel, f"{user} accidentally fed Otto a single oat." +
                   " jermaOtto")
 
+    @check_permissions
+    @check_cooldown(cooldown=30)
+    def on_score(self, e, msg, c, bot):
+        with open('score.json') as scorefile:
+            score = json.load(scorefile)
+        c.privmsg(bot.channel, "The total score for the channel is" +
+                               f" currently {score}.")
+
 
 commands = Commands()
