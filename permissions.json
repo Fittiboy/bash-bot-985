@@ -53,5 +53,10 @@
         "all": "0",
         "uids": [],
         "badges": {}
+    },
+    "on_score": {
+        "all": "1",
+        "uids": [],
+        "badges": {}
     }
 }
