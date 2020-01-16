@@ -1,4 +1,4 @@
 #!/bin/sh
-git add .
+git add bash_count.json pat_count.json score.json
 git commit -m "Update scores, etc."
 git push
