@@ -212,9 +212,18 @@ class Commands:
         c.privmsg(bot.channel, "https://clips.twitch.tv/RoughPreciousYakKeepo")
 
     @check_permissions
-    @check_cooldown(cooldown=20)
+    @check_cooldown(cooldown=120)
     def on_slap(self, e, msg, c, bot):
         c.privmsg(bot.channel, "https://clips.twitch.tv/SpunkyWildDillGivePLZ")
+    
+    @check_permissions
+    @check_cooldown(cooldown=30)
+    def on_oat(self, e, msg, c, bot):
+        for dict in e.tags:
+            if dict['key'] == 'display-name':
+                user = dict['value']
+        c.privmsg(bot.channel, f"{user} accidentally fed Otto a single oat." +
+                  " jermaOtto")
 
 
 commands = Commands()
