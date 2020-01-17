@@ -223,7 +223,7 @@ class Commands:
             if dict['key'] == 'display-name':
                 user = dict['value']
         c.privmsg(bot.channel, f"{user} accidentally fed Otto a single oat." +
-                  " jermaOtto")
+                  " jermaHeart")
 
     @check_permissions
     @check_cooldown(cooldown=30)
